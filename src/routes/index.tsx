@@ -115,10 +115,11 @@ function Index() {
             WhatsApp support available 24×7 — instant withdrawal, 24 hours service.
           </p>
           <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-whatsapp mt-5"
+             href={WHATSAPP_LINK}
+             target="_blank"
+             rel="noopener noreferrer"
+             onClick={trackLead}
+             className="btn-whatsapp mt-5"
           >
             <WhatsAppIcon className="h-6 w-6" />
             {WHATSAPP_NUMBER}
