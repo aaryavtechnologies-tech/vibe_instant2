@@ -131,6 +131,7 @@ function Index() {
         href={WHATSAPP_LINK}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={trackLead}
         aria-label={`Chat on WhatsApp ${WHATSAPP_NUMBER}`}
         className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-whatsapp transition-transform hover:scale-105"
       >
