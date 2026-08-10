@@ -10,6 +10,8 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+
+const META_PIXEL_ID = "2709241072805150";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
