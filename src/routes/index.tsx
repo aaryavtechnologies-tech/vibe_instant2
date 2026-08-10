@@ -57,21 +57,22 @@ function Index() {
         />
 
         <h1 className="mt-7 text-3xl font-extrabold uppercase leading-tight tracking-tight sm:text-4xl">
-          Get Your <span className="text-gradient-gold">Cricket ID</span> Now
+          <span className="text-gradient-gold">Cricket ID</span> on WhatsApp
         </h1>
         <p className="mt-3 max-w-md text-sm text-muted-foreground">
           Instant ID creation on WhatsApp. Self deposit &amp; withdrawal, no documentation
           required.
         </p>
+        <p className="mt-5 text-lg font-bold text-primary">Click now 👇</p>
 
         <a
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-whatsapp mt-7"
+          className="btn-whatsapp mt-3"
         >
           <WhatsAppIcon className="h-6 w-6" />
-          Get ID Now
+          WhatsApp now new 🆔
         </a>
 
         <img
