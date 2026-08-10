@@ -60,7 +60,7 @@ function Index() {
           <span className="text-gradient-gold">Cricket ID</span> on WhatsApp
         </h1>
         <p className="mt-3 max-w-md text-sm font-bold uppercase tracking-wide text-primary">
-          GET ID NOW
+          INSTANT ID CREATION ON WHATSAPP. SELF DEPOSIT &amp; WITHDRAWAL
         </p>
         <p className="mt-5 text-lg font-bold text-primary">Click now 👇</p>
 
