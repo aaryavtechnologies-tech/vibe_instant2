@@ -24,9 +24,19 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 const WHATSAPP_NUMBER = "+91 95239 63807";
 const WHATSAPP_LINK =
   "https://wa.me/919523963807?text=Hi%2C%20I%20want%20to%20create%20my%20ID";
+
+function trackLead() {
+  window.fbq?.("track", "Lead");
+}
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
