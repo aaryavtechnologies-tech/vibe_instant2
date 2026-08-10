@@ -24,9 +24,19 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 const WHATSAPP_NUMBER = "+91 95239 63807";
 const WHATSAPP_LINK =
   "https://wa.me/919523963807?text=Hi%2C%20I%20want%20to%20create%20my%20ID";
+
+function trackLead() {
+  window.fbq?.("track", "Lead");
+}
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -70,6 +80,7 @@ function Index() {
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={trackLead}
           className="btn-whatsapp mt-3"
         >
           <WhatsAppIcon className="h-6 w-6" />
@@ -104,10 +115,11 @@ function Index() {
             WhatsApp support available 24×7 — instant withdrawal, 24 hours service.
           </p>
           <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-whatsapp mt-5"
+             href={WHATSAPP_LINK}
+             target="_blank"
+             rel="noopener noreferrer"
+             onClick={trackLead}
+             className="btn-whatsapp mt-5"
           >
             <WhatsAppIcon className="h-6 w-6" />
             {WHATSAPP_NUMBER}
@@ -119,6 +131,7 @@ function Index() {
         href={WHATSAPP_LINK}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={trackLead}
         aria-label={`Chat on WhatsApp ${WHATSAPP_NUMBER}`}
         className="fixed bottom-5 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-whatsapp transition-transform hover:scale-105"
       >
