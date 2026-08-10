@@ -80,6 +80,7 @@ function Index() {
           href={WHATSAPP_LINK}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={trackLead}
           className="btn-whatsapp mt-3"
         >
           <WhatsAppIcon className="h-6 w-6" />
