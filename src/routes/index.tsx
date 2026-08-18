@@ -88,7 +88,7 @@ function Index() {
           href="https://sankalp365.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 text-base font-extrabold uppercase tracking-wide text-primary-foreground shadow-gold transition-transform hover:scale-105"
+          className="mt-4 inline-flex items-center justify-center rounded-full bg-primary px-[1.9rem] py-[0.9rem] text-[1.05rem] font-extrabold uppercase tracking-wide text-primary-foreground shadow-gold transition-transform hover:scale-105"
         >
           Sign up
         </a>
