@@ -71,7 +71,7 @@ function Index() {
           <span className="text-gradient-gold">CRICKET ID</span>
           <span className="text-foreground"> NOW</span>
         </p>
-        <p className="mt-5 text-lg font-bold text-primary">Click now 👇</p>
+        <p className="mt-1 text-lg font-bold text-primary">Click now 👇</p>
 
         <a
           href={WHATSAPP_LINK}
