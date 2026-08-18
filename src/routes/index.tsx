@@ -59,16 +59,13 @@ function Index() {
     <main className="relative min-h-screen overflow-hidden bg-background text-foreground">
       <div className="pointer-events-none absolute inset-0 bg-glow" />
 
-      <div className="relative mx-auto flex w-full max-w-xl flex-col items-center px-5 pb-28 pt-10 text-center">
+      <div className="relative mx-auto flex w-full max-w-xl flex-col items-center px-5 pb-28 pt-4 text-center">
         <img
           src={logoAsset.url}
           alt="Sankalp365 official logo"
-          className="h-40 w-40 rounded-full border-2 border-primary/70 object-cover shadow-gold sm:h-48 sm:w-48"
+          className="h-40 w-40 -mt-4 rounded-full border-2 border-primary/70 object-cover shadow-gold sm:h-48 sm:w-48"
         />
 
-        <h1 className="mt-7 text-3xl font-extrabold uppercase leading-tight tracking-tight sm:text-4xl">
-          <span className="text-gradient-gold">Cricket ID</span> on WhatsApp
-        </h1>
         <p className="mt-3 text-3xl font-extrabold uppercase leading-tight sm:text-4xl">
           <span className="text-foreground">GET YOUR </span>
           <span className="text-gradient-gold">CRICKET ID</span>
@@ -85,6 +82,15 @@ function Index() {
         >
           <WhatsAppIcon className="h-6 w-6" />
           WhatsApp now new 🆔
+        </a>
+
+        <a
+          href="https://sankalp365.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 text-base font-extrabold uppercase tracking-wide text-primary-foreground shadow-gold transition-transform hover:scale-105"
+        >
+          Sign up
         </a>
 
         <img
