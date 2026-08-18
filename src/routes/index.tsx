@@ -78,7 +78,7 @@ function Index() {
           target="_blank"
           rel="noopener noreferrer"
           onClick={trackLead}
-          className="btn-whatsapp mt-3"
+          className="btn-whatsapp mt-3 w-full"
         >
           <WhatsAppIcon className="h-6 w-6" />
           WhatsApp now new 🆔
@@ -88,7 +88,7 @@ function Index() {
           href="https://sankalp365.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-flex items-center justify-center rounded-full bg-primary px-[1.9rem] py-[0.9rem] text-[1.05rem] font-extrabold uppercase tracking-wide text-primary-foreground shadow-gold transition-transform hover:scale-105"
+          className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-primary px-[1.9rem] py-[0.9rem] text-[1.05rem] font-extrabold uppercase tracking-wide text-primary-foreground shadow-gold transition-transform hover:scale-105"
         >
           Sign up
         </a>
