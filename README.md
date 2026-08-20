@@ -14,7 +14,7 @@ remove this and add the 1 image provided,
 
 change the logo/dp from the 2 image,. 
 
-+91 95239 63807 add this number for what's app and add what's app official logo.
++91 76320 58638 add this number for what's app and add what's app official logo.
 
 This project was built with [Lovable](https://lovable.dev).
 
