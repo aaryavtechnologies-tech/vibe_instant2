@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logoAsset from "@/assets/logo.png.asset.json";
-import promoAsset from "@/assets/promo.png.asset.json";
+import logoAsset from "@/assets/logo.png";
+import promoAsset from "@/assets/promo.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -61,7 +61,7 @@ function Index() {
 
       <div className="relative mx-auto flex w-full max-w-xl flex-col items-center px-5 pb-28 pt-4 text-center">
         <img
-          src={logoAsset.url}
+          src={logoAsset}
           alt="Sankalp365 official logo"
           className="h-40 w-40 -mt-4 rounded-full border-2 border-primary/70 object-cover shadow-gold sm:h-48 sm:w-48"
         />
@@ -94,7 +94,7 @@ function Index() {
         </a>
 
         <img
-          src={promoAsset.url}
+          src={promoAsset}
           alt="Sankalp365 offer: 10% bonus on new ID and 5% on every deposit"
           className="mt-8 w-full rounded-2xl border border-primary/30 shadow-gold"
         />
