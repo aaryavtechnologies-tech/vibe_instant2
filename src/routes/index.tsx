@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import logoAsset from "@/assets/logo.png";
 import promoAsset from "@/assets/promo.jpg";
 
@@ -55,6 +56,28 @@ const stats = [
 ];
 
 function Index() {
+  const [formData, setFormData] = useState({ name: "", phone: "", email: "" });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const { name, phone, email } = formData;
+
+    // 🔥 TRACK LEAD IN META
+    window.fbq?.("track", "Lead");
+
+    // 🔥 SAVE DATA
+    console.log("Lead Captured:", name, phone, email);
+
+    setSubmitted(true);
+
+    // 👉 Redirect to WhatsApp with captured lead details
+    const waText = encodeURIComponent(
+      `Hi, I want to create my ID.\nName: ${name}\nPhone: ${phone}\nEmail: ${email}`
+    );
+    window.open(`https://wa.me/917632058638?text=${waText}`, "_blank");
+  };
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-background text-foreground">
       <div className="pointer-events-none absolute inset-0 bg-glow" />
@@ -83,6 +106,74 @@ function Index() {
           <WhatsAppIcon className="h-6 w-6" />
           WhatsApp now new 🆔
         </a>
+
+        {/* Lead Capture Form */}
+        <section className="mt-6 w-full rounded-2xl border border-primary/30 bg-card p-6 text-left shadow-gold">
+          <h2 className="text-xl font-extrabold uppercase text-gradient-gold text-center">
+            Enter Your Details
+          </h2>
+          <p className="mt-1 text-xs text-center text-muted-foreground">
+            Fill in your details below to get your instant ID & bonus on WhatsApp
+          </p>
+
+          <form id="leadForm" onSubmit={handleSubmit} className="mt-5 space-y-4">
+            <div>
+              <label htmlFor="name" className="block text-xs font-semibold text-foreground mb-1">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                required
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                className="w-full rounded-xl border border-primary/30 bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="phone" className="block text-xs font-semibold text-foreground mb-1">
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Phone Number"
+                required
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                className="w-full rounded-xl border border-primary/30 bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="email" className="block text-xs font-semibold text-foreground mb-1">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                className="w-full rounded-xl border border-primary/30 bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="btn-whatsapp w-full mt-2 justify-center py-3.5 text-base font-extrabold cursor-pointer"
+            >
+              <WhatsAppIcon className="h-5 w-5" />
+              {submitted ? "Submitted! Opening WhatsApp..." : "Submit & Get ID"}
+            </button>
+          </form>
+        </section>
 
         <a
           href="https://sankalp365.com"
@@ -146,3 +237,4 @@ function Index() {
     </main>
   );
 }
+
